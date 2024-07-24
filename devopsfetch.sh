@@ -18,7 +18,7 @@ get_log_file_path() {
     local log_file="$log_dir.log"
 
     # Create the directory if it doesn't exist
-    mkdir -p "$log_dir"
+    mkdir -p "$LOG_DIR"
     echo "$log_file"
 }
 
