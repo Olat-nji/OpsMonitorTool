@@ -19,7 +19,7 @@ The devopsfetch Tool helps you  collect and display system information, includin
    - Run the script to install dependencies and set up the `devopsfetch` script:
 
      ```sh
-     ./install-deps.sh
+     sudo ./install-deps.sh
      ```
     The script is now available for usage by running `devopsfetch`. To view script usage options run: 
 
