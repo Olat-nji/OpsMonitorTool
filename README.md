@@ -62,34 +62,61 @@ The `devopsfetch` script supports multiple command-line flags:
    devopsfetch -h
    ```
 
-2. Set a time range:
+2. Fetch activities performed within a certain time interval:
 
    ```sh
    devopsfetch -t 2024-07-01 2024-07-07
    ```
 
-3. Specify a port number:
+3. Fetch all listening ports:
+
+     ```sh
+   devopsfetch -p 
+   devopsfetch --ports 
+   ``` 
+   Retrieve details relating to a specific port:
 
    ```sh
    devopsfetch -p 8080
+   devopsfetch --ports 8080
    ```
 
-4. Use Docker options:
+4. Get information about all running Docker containers and their images:
+
+  ```sh
+   devopsfetch -d
+   devopsfetch --docker
+   ```
+   Retrieve detailed information abouut to a container:
 
    ```sh
    devopsfetch -d nginx
+   devopsfetch --docker nginx
    ```
 
-5. Use Nginx options:
+5. Retriev all NGINX domains and the ports they proxy to:
+
+   ```sh
+   devopsfetch -n 
+   devopsfetch --nginx 
+   ```
+   Retrive detailed information about a specific NGINX domain configuration:
 
    ```sh
    devopsfetch -n domain.com
+   devopsfetch --nginx domain.com
    ```
 
-6. Use user-related options:
+6. Retrieve information about users and their login times:
 
    ```sh
+   devopsfetch -u
+   devopsfetch --users
+   ```
+   Retrieve detailed information about a specific user
+   ```sh
    devopsfetch -u olatunji
+   devopsfetch --users olatunji
    ```
 
 ### Logging Mechanism
