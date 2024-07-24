@@ -28,7 +28,7 @@ The devopsfetch Tool helps you  collect and display system information, includin
      ```
 2. **Setup Monitoring**
 
-   Optionally you can setup the script to run in the background and edit the options at the top of the setup-monitor script to customize  monitoring options. The `setup-monitor.sh` script sets up the monitoring service using systemd.
+   Optionally you can setup the script to run in the background and edit the options at the top of the setup-monitor script to customize  monitoring options. The `setup-monitor.sh` script sets up the monitoring service using systemd. Here activities are only logged when they change, so succsessive duplicate activities are not logged.
 
    **Steps:**
    - Make the script executable:
