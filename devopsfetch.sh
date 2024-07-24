@@ -139,7 +139,7 @@ docker_without_value() {
         echo "Docker is not installed"
         return 1
     else
-        Here is the updated command to exclude images with `<none>` in their repository or tag:
+       
 
 
 command="
