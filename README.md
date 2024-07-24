@@ -78,7 +78,7 @@ The `devopsfetch` script supports multiple command-line flags:
 
    ```sh
    sudo devopsfetch -p 8080
-   sudo devopsfetch --ports 8080
+   sudo devopsfetch --port 8080
    ```
 
 4. Get information about all running Docker containers and their images:
