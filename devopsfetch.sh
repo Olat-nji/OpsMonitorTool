@@ -139,8 +139,16 @@ docker_without_value() {
         echo "Docker is not installed"
         return 1
     else
-        command="
-echo \"-------------------------------------------------\"    
+        Here is the updated command to exclude images with `<none>` in their repository or tag:
+
+
+command="
+echo \"-------------------------------------------------\"
+echo \"Docker Images:\"
+echo \"-------------------------------------------------\"
+docker images | grep -v '<none>'
+echo \"\"
+echo \"-------------------------------------------------\"
 echo \"Docker Containers:\"
 echo \"-------------------------------------------------\"
 docker ps -a
@@ -150,6 +158,7 @@ echo \"-------------------------------------------------\"
 echo \"\"
 echo \"\"
 "
+
     fi
 
     output_command "$service_name" "$command" "$log_file_path" "Docker Images & Containers"
