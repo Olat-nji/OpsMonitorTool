@@ -81,7 +81,7 @@ port_without_value() {
 sudo lsof -i -P -n | grep LISTEN | awk '
 BEGIN {
     print "+-----------------+-------------+----------------+------------------+-----------+---------+------------+"
-    print "| Process Command | Process ID | Owner User     | File Descriptor   | Protocol  | Device  | Port       |"
+    print "| Process Command | Process ID | Owner User      | File Descriptor  | Protocol  | Device  | Port       |"
     print "+-----------------+-------------+----------------+------------------+-----------+---------+------------+"
 }
 {
