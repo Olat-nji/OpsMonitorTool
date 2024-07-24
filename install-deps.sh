@@ -26,16 +26,11 @@ echo "Configuring Log Rotate"
 sudo touch /etc/logrotate.d/devopsfetch 
 sudo tee /etc/logrotate.d/devopsfetch > /dev/null <<EOL
 /var/log/devopsfetch/*/*.log {
-    daily
+    weekly
     rotate 7
     compress
     missingok
     notifempty
-    dateext
-    create 0640 root root
-    sharedscripts
-    postrotate
-        /bin/systemctl reload devops-fetch.service > /dev/null 2>&1 || true
     endscript
 }
 EOL

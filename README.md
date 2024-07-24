@@ -1,8 +1,7 @@
 ### Documentation for DevOps Fetch Tool
 
 #### Overview
-
-The DevOps Fetch Tool consists of several scripts designed to install necessary dependencies, set up monitoring, and manage logs. This documentation covers the installation and configuration steps, usage examples for each command-line flag, and details about the logging mechanism.
+The DevOps Fetch Tool helps you  collect and display system information, including active ports, user logins, Nginx configurations, Docker images, and container statuses. This Tool consists of several scripts designed to install necessary dependencies, set up monitoring, and manage logs. This documentation covers the installation and configuration steps, usage examples for each command-line flag, and details about the logging mechanism.
 
 ### Getting Started
 
@@ -111,10 +110,15 @@ To view a specific log file:
 cat /var/log/devopsfetch/<log_type>/<date>.log
 ```
 
+Certainly! Here's a properly formatted version of your log rotation file and accompanying documentation:
+
+---
+
 **Log Rotation:**
 
-Log files are rotated dailyusing log-rotate, ensuring that logs are maintained without consuming excessive disk space. This rotation helps in managing log files efficiently and keeps the system running smoothly.
+Log files are rotated weekly using logrotate, ensuring that logs are maintained without consuming excessive disk space. This rotation helps in managing log files efficiently and keeps the system running smoothly.
 
 ---
 
 This documentation provides a comprehensive guide to installing, configuring, and using the DevOps Fetch Tool, along with managing and retrieving logs effectively.
+
