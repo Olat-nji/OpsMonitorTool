@@ -121,7 +121,8 @@ The `devopsfetch` script supports multiple command-line flags:
 
 ### Logging Mechanism
 
-Logs are stored in `/var/log/devopsfetch` with subdirectories based on the monitoring type. Logs are rotated daily and are named according to the date.
+Logs are stored in `/var/log/devopsfetch` with subdirectories based on the activities being monitored.For example, Ports logs and logs for port 80 would be stored in  `/var/log/devopsfetch/ports` or `/var/log/devopsfetch/ports/port-80` respectively.  Logs are rotated daily and are named according to the date which they were collected.
+
 
 **Retrieving Logs:**
 
@@ -136,8 +137,6 @@ To view a specific log file:
 ```sh
 cat /var/log/devopsfetch/<log_type>/<date>.log
 ```
-
-Certainly! Here's a properly formatted version of your log rotation file and accompanying documentation:
 
 ---
 
