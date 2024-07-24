@@ -21,7 +21,7 @@ The devopsfetch Tool helps you  collect and display system information, includin
      ```sh
      ./install-deps.sh
      ```
-    The script is now available for usage by running 
+    The script is now available for usage by running `devopsfetch`. To view script usage options run: 
 
      ```sh
      devopsfetch -h
