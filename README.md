@@ -72,7 +72,7 @@ The `devopsfetch` script supports multiple command-line flags:
 
      ```sh
    sudo devopsfetch -p 
-   sudo devopsfetch --ports 
+   sudo devopsfetch --port
    ``` 
    Retrieve details relating to a specific port:
 
