@@ -24,7 +24,7 @@ The devopsfetch Tool helps you  collect and display system information, includin
     The script is now available for usage by running `devopsfetch`. To view script usage options run: 
 
      ```sh
-     devopsfetch -h
+     sudo devopsfetch -h
      ```
 2. **Setup Monitoring**
 
@@ -40,7 +40,7 @@ The devopsfetch Tool helps you  collect and display system information, includin
    - Run the script to set up the monitoring service:
 
      ```sh
-     ./setup-monitor.sh
+     sudo ./setup-monitor.sh
      ```
 
 ### Usage Examples for Command-Line Flags
@@ -59,64 +59,64 @@ The `devopsfetch` script supports multiple command-line flags:
 1. Display help information:
 
    ```sh
-   devopsfetch -h
+   sudo devopsfetch -h
    ```
 
 2. Fetch activities performed within a certain time interval:
 
    ```sh
-   devopsfetch -t 2024-07-01 2024-07-07
+   sudo devopsfetch -t 2024-07-01 2024-07-07
    ```
 
 3. Fetch all listening ports:
 
      ```sh
-   devopsfetch -p 
-   devopsfetch --ports 
+   sudo devopsfetch -p 
+   sudo devopsfetch --ports 
    ``` 
    Retrieve details relating to a specific port:
 
    ```sh
-   devopsfetch -p 8080
-   devopsfetch --ports 8080
+   sudo devopsfetch -p 8080
+   sudo devopsfetch --ports 8080
    ```
 
 4. Get information about all running Docker containers and their images:
 
   ```sh
-   devopsfetch -d
-   devopsfetch --docker
+   sudo devopsfetch -d
+   sudo devopsfetch --docker
    ```
    Retrieve detailed information abouut to a container:
 
    ```sh
-   devopsfetch -d nginx
-   devopsfetch --docker nginx
+   sudo devopsfetch -d nginx
+   sudo devopsfetch --docker nginx
    ```
 
 5. Retriev all NGINX domains and the ports they proxy to:
 
    ```sh
-   devopsfetch -n 
-   devopsfetch --nginx 
+   sudo devopsfetch -n 
+   sudo devopsfetch --nginx 
    ```
    Retrive detailed information about a specific NGINX domain configuration:
 
    ```sh
-   devopsfetch -n domain.com
-   devopsfetch --nginx domain.com
+   sudo devopsfetch -n domain.com
+   sudo devopsfetch --nginx domain.com
    ```
 
 6. Retrieve information about users and their login times:
 
    ```sh
-   devopsfetch -u
-   devopsfetch --users
+   sudo devopsfetch -u
+   sudo devopsfetch --users
    ```
    Retrieve detailed information about a specific user
    ```sh
-   devopsfetch -u olatunji
-   devopsfetch --users olatunji
+   sudo devopsfetch -u olatunji
+   sudo devopsfetch --users olatunji
    ```
 
 ### Logging Mechanism
