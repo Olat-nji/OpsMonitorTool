@@ -14,8 +14,8 @@ fi
 # Function to get the log file path
 get_log_file_path() {
     local service="$1"
-    local log_dir="$LOG_DIR/$1/$2"
-    local log_file="$log_dir/$(date '+%Y-%m-%d').log"
+    local log_dir="$LOG_DIR/$2"
+    local log_file="$log_dir.log"
 
     # Create the directory if it doesn't exist
     mkdir -p "$log_dir"
@@ -42,7 +42,7 @@ output_command() {
     fi
 
     # Execute the command and store its output in a temporary file
-    sudo eval "$command" >"$TEMP_FILE"
+    eval "$command" >"$TEMP_FILE"
     echo "[$(date)] Running Commands..." >>"$log_file_path"
 
     # Check if the output has changed since the last execution
@@ -73,7 +73,7 @@ output_command() {
 
 # Function to handle the action when -p or --port is passed without a value
 port_without_value() {
-    local log_file_path=$(get_log_file_path "ports" "")
+    local log_file_path=$(get_log_file_path "ports" "ports")
     local service_name="ports"
 
     local command=$(
@@ -132,7 +132,7 @@ EOF
 # Function to handle the action when -d or --docker is passed without a value
 docker_without_value() {
     local service_name="docker-images-and-containers"
-    local log_file_path=$(get_log_file_path "docker" "")
+    local log_file_path=$(get_log_file_path "docker" "docker")
     local command=""
 
     if ! command -v docker &>/dev/null; then
@@ -205,7 +205,7 @@ echo \"\"
 # Function to handle the action when -n or --nginx is passed without a value
 nginx_without_value() {
     local service_name="nginx"
-    local log_file_path=$(get_log_file_path "nginx" "")
+    local log_file_path=$(get_log_file_path "nginx" "nginx")
 
     local command=""
     # Check if Nginx is installed
@@ -287,7 +287,7 @@ echo \"\"
 # Function to handle the action when -u or --users is passed without a value
 users_without_value() {
     local service_name="users"
-    local log_file_path=$(get_log_file_path "users" "")
+    local log_file_path=$(get_log_file_path "users" "users")
 
     local command=$(
         cat <<'EOF'

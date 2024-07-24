@@ -25,18 +25,20 @@ install_dependency logrotate
 echo "Configuring Log Rotate"
 sudo touch /etc/logrotate.d/devopsfetch 
 sudo tee /etc/logrotate.d/devopsfetch > /dev/null <<EOL
-/var/log/devopsfetch/*/*.log {
+/var/log/devopsfetch/*.log {
     weekly
-    rotate 7
+    rotate 4
     compress
+    delaycompress
     missingok
     notifempty
-    endscript
+    create 0644 root root
 }
 EOL
 
 #Log rotate at 2 AM every day.
-0 2 * * * /usr/sbin/logrotate /etc/logrotate.conf
+0 2 * * * /usr/sbin/logrotate /etc/logrotate.d/devopsfetch
+
 
 
 
