@@ -1,7 +1,7 @@
-### Documentation for DevOps Fetch Tool
+### Documentation for devopsfetch Tool
 
 #### Overview
-The DevOps Fetch Tool helps you  collect and display system information, including active ports, user logins, Nginx configurations, Docker images, and container statuses. This Tool consists of several scripts designed to install necessary dependencies, set up monitoring, and manage logs. This documentation covers the installation and configuration steps, usage examples for each command-line flag, and details about the logging mechanism.
+The devopsfetch Tool helps you  collect and display system information, including active ports, user logins, Nginx configurations, Docker images, and container statuses. This Tool consists of several scripts designed to install necessary dependencies, set up monitoring, and manage logs. This documentation covers the installation and configuration steps, usage examples for each command-line flag, and details about the logging mechanism.
 
 ### Getting Started
 
@@ -16,7 +16,7 @@ The DevOps Fetch Tool helps you  collect and display system information, includi
      chmod +x install-deps.sh
      ```
 
-   - Run the script to install dependencies and set up the `devops-fetch` script:
+   - Run the script to install dependencies and set up the `devopsfetch` script:
 
      ```sh
      ./install-deps.sh
@@ -24,7 +24,7 @@ The DevOps Fetch Tool helps you  collect and display system information, includi
     The script is now available for usage by running 
 
      ```sh
-     devops-fetch -h
+     devopsfetch -h
      ```
 2. **Setup Monitoring**
 
@@ -45,7 +45,7 @@ The DevOps Fetch Tool helps you  collect and display system information, includi
 
 ### Usage Examples for Command-Line Flags
 
-The `devops-fetch` script supports multiple command-line flags:
+The `devopsfetch` script supports multiple command-line flags:
 
 - `-h, --help`: Display help information.
 - `-t, --time <start_date> [end_date]`: Specify a start and optionally an end date.
@@ -59,37 +59,37 @@ The `devops-fetch` script supports multiple command-line flags:
 1. Display help information:
 
    ```sh
-   devops-fetch -h
+   devopsfetch -h
    ```
 
 2. Set a time range:
 
    ```sh
-   devops-fetch -t 2024-07-01 2024-07-07
+   devopsfetch -t 2024-07-01 2024-07-07
    ```
 
 3. Specify a port number:
 
    ```sh
-   devops-fetch -p 8080
+   devopsfetch -p 8080
    ```
 
 4. Use Docker options:
 
    ```sh
-   devops-fetch -d nginx
+   devopsfetch -d nginx
    ```
 
 5. Use Nginx options:
 
    ```sh
-   devops-fetch -n domain.com
+   devopsfetch -n domain.com
    ```
 
 6. Use user-related options:
 
    ```sh
-   devops-fetch -u olatunji
+   devopsfetch -u olatunji
    ```
 
 ### Logging Mechanism

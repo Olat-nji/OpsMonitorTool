@@ -1,5 +1,5 @@
 [Unit]
-Description=Devops Fetch Service
+Description=DevopsFetch Service
 After=network.target
 
 [Service]

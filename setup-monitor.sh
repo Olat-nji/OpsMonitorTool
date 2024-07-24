@@ -8,24 +8,24 @@ fi
 
 # Variables
 
-export SYSTEMD_SERVICE_PATH="/etc/systemd/system/devops-fetch.service"
-export SCRIPT_PATH="/usr/local/bin/devops-fetch"
+export SYSTEMD_SERVICE_PATH="/etc/systemd/system/devopsfetch.service"
+export SCRIPT_PATH="/usr/local/bin/devopsfetch"
 export SCRIPT_OPTIONS="-d -n -u -p"
 
 # Create systemd service files
 setup_systemd_service() {
     echo "Creating systemd service file at $SYSTEMD_SERVICE_PATH"
-    envsubst < devops-fetch.service > "$SYSTEMD_SERVICE_PATH"
+    envsubst < devopsfetch.service > "$SYSTEMD_SERVICE_PATH"
     
 
     echo "Reloading systemd manager configuration"
     sudo systemctl daemon-reload
 
-    echo "Enabling devops-fetch service"
-    sudo systemctl enable devops-fetch
+    echo "Enabling devopsfetch service"
+    sudo systemctl enable devopsfetch
 
-    echo "Starting devops-fetch service"
-    sudo systemctl start devops-fetch
+    echo "Starting devopsfetch service"
+    sudo systemctl start devopsfetch
 
     
 
@@ -33,4 +33,4 @@ setup_systemd_service() {
 
 setup_systemd_service
 
-echo "Monitoring has been setup. devops-fetch is running in the background."
+echo "Monitoring has been setup. devopsfetch is running in the background."

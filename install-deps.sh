@@ -51,8 +51,8 @@ sudo systemctl enable nginx
 sudo systemctl start nginx
 
 # Variables for the script setup
-SCRIPT_NAME="devops-fetch.sh"
-SCRIPT_PATH="/usr/local/bin/devops-fetch"
+SCRIPT_NAME="devopsfetch.sh"
+SCRIPT_PATH="/usr/local/bin/devopsfetch"
 
 
 # Function to copy the script to /usr/local/bin
@@ -74,8 +74,8 @@ setup_script
 echo ""
 echo ""
 echo ""
-echo "All dependencies have been installed, and the devops-fetch tool is ready for usage."
+echo "All dependencies have been installed, and the devopsfetch tool is ready for usage."
 
 echo ""
 echo ""
-devops-fetch -h
+devopsfetch -h

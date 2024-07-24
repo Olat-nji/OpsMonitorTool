@@ -418,7 +418,7 @@ EOF
 }
 
 help() {
-    echo "Usage: devops-fetch [options]"
+    echo "Usage: devopsfetch [options]"
     echo
     echo "Options:"
     echo "  -p, --port [port_number]        Display active ports and services, or information about a specific port."
@@ -430,17 +430,17 @@ help() {
 
     echo
     echo "Examples:"
-    echo "  devops-fetch --port                      # Display active ports and services."
-    echo "  devops-fetch --port 8090                 # Display information about port 8090."
-    echo "  devops-fetch --docker                    # Display Docker images and containers."
-    echo "  devops-fetch --docker your_container     # Display information about the Docker container named 'your_container'."
-    echo "  devops-fetch --nginx                     # Display Nginx server block configurations."
-    echo "  devops-fetch --nginx domain.com          # Display Nginx configuration for 'domain.com'."
-    echo "  devops-fetch --users                     # Display user login times."
-    echo "  devops-fetch --users john_doe            # Display information for user 'Olatunji'."
-    echo "  devops-fetch --time 2024-07-18           # Display all activities between the specified dates. End date defaults to start date."
-    echo "  devops-fetch --time 2024-07-18 2024-07-22 # Display all activities between the specified dates. End date defaults to start date."
-    echo "  devops-fetch --help                      # Display this help message."
+    echo "  devopsfetch --port                      # Display active ports and services."
+    echo "  devopsfetch --port 8090                 # Display information about port 8090."
+    echo "  devopsfetch --docker                    # Display Docker images and containers."
+    echo "  devopsfetch --docker your_container     # Display information about the Docker container named 'your_container'."
+    echo "  devopsfetch --nginx                     # Display Nginx server block configurations."
+    echo "  devopsfetch --nginx domain.com          # Display Nginx configuration for 'domain.com'."
+    echo "  devopsfetch --users                     # Display user login times."
+    echo "  devopsfetch --users john_doe            # Display information for user 'Olatunji'."
+    echo "  devopsfetch --time 2024-07-18           # Display all activities between the specified dates. End date defaults to start date."
+    echo "  devopsfetch --time 2024-07-18 2024-07-22 # Display all activities between the specified dates. End date defaults to start date."
+    echo "  devopsfetch --help                      # Display this help message."
 }
 
 
