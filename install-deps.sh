@@ -29,7 +29,6 @@ sudo tee /etc/logrotate.d/devopsfetch > /dev/null <<EOL
     weekly
     rotate 4
     compress
-    delaycompress
     missingok
     notifempty
     create 0644 root root
