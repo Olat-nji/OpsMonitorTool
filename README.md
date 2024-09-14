@@ -1,7 +1,7 @@
-### Documentation for devopsfetch Tool
+### Documentation for OpsMonitorTool Tool
 
 #### Overview
-The devopsfetch Tool helps you  collect and display system information, including active ports, user logins, Nginx configurations, Docker images, and container statuses. This Tool consists of several scripts designed to install necessary dependencies, set up monitoring, and manage logs. This documentation covers the installation and configuration steps, usage examples for each command-line flag, and details about the logging mechanism.
+The OpsMonitorTool Tool helps you  collect and display system information, including active ports, user logins, Nginx configurations, Docker images, and container statuses. This Tool consists of several scripts designed to install necessary dependencies, set up monitoring, and manage logs. This documentation covers the installation and configuration steps, usage examples for each command-line flag, and details about the logging mechanism.
 
 ### Getting Started
 
